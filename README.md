@@ -1,5 +1,6 @@
 # Pandas-search: Alfred-workflow
 A workflow to search in pandas documentation and display in-line. Only supports **Alfred 3**
+![logo](pandas-icon.png)
 ## Preview
 ![illustration](preview.gif)
 ## Requirements
