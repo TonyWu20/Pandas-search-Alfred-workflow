@@ -10,7 +10,6 @@ import time
 import re
 # import multiprocessing as mp
 # from functools import wraps
-ICON_DEFAULT = 'pandas-icon.png'
 path = os.path.abspath('.')
 
 
@@ -89,7 +88,11 @@ class matplotlib_search(object):
         self.driver.quit()
 
 
-def makeItem(query, url, title, subtitle):
+def makeItem(query, url, title, subtitle, search):
+    if search == 'pandas':
+        icon = 'pandas.png'
+    elif search == 'matplotlib':
+        icon = 'matplotlib_med.png'
     item = {
         'uid': url,
         'title': title,
@@ -97,7 +100,7 @@ def makeItem(query, url, title, subtitle):
         'arg': url,
         'autocomplete': query,
         'icon': {
-            'path': 'icon.png'
+            'path': icon
         }
     }
     return item
@@ -121,7 +124,7 @@ def main():
     if search_type == 'pandas':
         pandas = pandas_search()
         results = pandas.search(query)
-        items = [makeItem(query, results[i]['Link'], results[i]['Title'], results[i]['Subtitle'])
+        items = [makeItem(query, results[i]['Link'], results[i]['Title'], results[i]['Subtitle'], 'pandas')
                  for i in range(10)]
         out = makeReturn(items)
         return json.dumps(out, indent=4) + '\n'
@@ -129,7 +132,8 @@ def main():
         matplot = matplotlib_search()
         results = matplot.search(query)
         results_num = len(results)
-        items = [makeItem(query, results[i]['Link'], results[i]['Title'], results[i]['Subtitle'])
+        icon = 'matplotlib_med.png'
+        items = [makeItem(query, results[i]['Link'], results[i]['Title'], results[i]['Subtitle'], 'matplotlib')
                  for i in range(results_num)]
         out = makeReturn(items)
         return json.dumps(out, indent=4) + '\n'
