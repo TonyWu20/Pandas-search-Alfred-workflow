@@ -33,8 +33,12 @@ class pandas_search(object):
             result = res.find_element_by_xpath(
                 f'//*[@id="search-results"]/ul/li[{i}]/a')
             link = result.get_attribute('href')
-            text = result.text
-            result = {"Title": text, "Link": link}
+            title = result.text
+            try:
+                context = res.find_element_by_xpath(f'//*[@id="search-results"]/ul/li[{i}]/div').text
+                result = {"Title": title, "Subtitle": context, "Link": link}
+            except:
+                result = {"Title": title, "Subtitle": link, "Link": link}
             return result
         result_list = list(map(get_results, range(10)))
         self.driver.quit()
@@ -117,7 +121,7 @@ def main():
     if search_type == 'pandas':
         pandas = pandas_search()
         results = pandas.search(query)
-        items = [makeItem(query, results[i]['Link'], results[i]['Title'])
+        items = [makeItem(query, results[i]['Link'], results[i]['Title'], results[i]['Subtitle'])
                  for i in range(10)]
         out = makeReturn(items)
         return json.dumps(out, indent=4) + '\n'
