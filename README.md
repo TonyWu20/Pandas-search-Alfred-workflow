@@ -3,6 +3,7 @@ A workflow to search in Scipy core packages documentation and display in-line. O
 
 <p align="center">
 <img src="https://github.com/TonyWu20/Pandas-search-Alfred-workflow/blob/master/pandas-icon.png?raw=true">
+<img src="http://scipy-lectures.org/_images/plot_polar_ex_1.png" height=100px>
 </p>
 
 ## Currently Supported Documentations
