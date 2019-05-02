@@ -1,16 +1,18 @@
-# Pandas-search: Alfred-workflow (30 April, 2019)
+# Pandas-search: Alfred-workflow (2 May, 2019)
 A workflow to search in Scipy core packages documentation and display in-line. Only supports **Alfred 3**
 
 <p align="center">
 <img src="https://github.com/TonyWu20/Pandas-search-Alfred-workflow/blob/master/pandas-icon.png?raw=true">
-<img src="http://scipy-lectures.org/_images/plot_polar_ex_1.png" height=100px>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/1024px-Created_with_Matplotlib-logo.svg.png" height=100px>
+<img src="https://github.com/TonyWu20/Scipy-package-search-Alfred-workflow/blob/scipy/source_scipy/numpy-logo-300.png?raw=true" height =100px>
 </p>
 
 ## Currently Supported Documentations
 - Pandas
 - Matplotlib
+- Numpy
 ## Preview
-![illustration](preview.gif)
+![illustration1](preview.gif)
 ## Requirements
 * This workflow is developed with **Python 3** and it relies on **Selenium** + Chromedriver to get the Javascript generated search results. The chromedriver has been packed into the workflow, so it helps you avoid the chromedriver path assigning trouble. **However, you still needs to install Selenium beforehand.**
 * This workflow uses JSON format to present the formatted results to Alfred. As only Alfred 3 supports JSON format, this workflow is an **Alfred 3 only** workflow.
