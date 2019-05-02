@@ -2,9 +2,9 @@
 A workflow to search in Scipy core packages documentation and display in-line. Only supports **Alfred 3**
 
 <p align="center">
-<img src="https://github.com/TonyWu20/Pandas-search-Alfred-workflow/blob/master/pandas-icon.png?raw=true">
+<img src="https://github.com/TonyWu20/Scipy-package-search-Alfred-workflow/blob/master/source_scipy/pandas.png?raw=true" height=100px>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/1024px-Created_with_Matplotlib-logo.svg.png" height=100px>
-<img src="https://github.com/TonyWu20/Scipy-package-search-Alfred-workflow/blob/scipy/source_scipy/numpy-logo-300.png?raw=true" height =100px>
+<img src="https://github.com/TonyWu20/Scipy-package-search-Alfred-workflow/blob/master/source_scipy/numpy-logo-300.png?raw=true" height =100px>
 </p>
 
 ## Currently Supported Documentations
